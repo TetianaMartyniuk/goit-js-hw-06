@@ -22,3 +22,28 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/* ADD STYLES */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.picStyle {
+  margin-top: 15px;
+}

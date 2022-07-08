@@ -1,3 +1,6 @@
+const gallery = document.querySelector(".gallery")
+
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +15,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+images.forEach((image) => {
+  const imgItem = document.createElement("li");
+  imgItem.insertAdjacentHTML("afterbegin", `<img src="${image.url}" alt="${image.alt}" width="350px" />`)
+  imgItem.classList.add("picStyle")
+  gallery.append(imgItem)
+  
+})
+
+gallery.classList.add("list")
+const img = document.querySelectorAll("img")
+img.classList.add("img-styles")
