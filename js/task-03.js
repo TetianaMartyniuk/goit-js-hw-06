@@ -16,14 +16,15 @@ const images = [
   },
 ];
 
-images.forEach((image) => {
-  const imgItem = document.createElement("li");
-  imgItem.insertAdjacentHTML("afterbegin", `<img src="${image.url}" alt="${image.alt}" width="350px" />`)
-  imgItem.classList.add("picStyle")
-  gallery.append(imgItem)
-  
-})
+//  images.forEach((image) => {
+//   gallery.insertAdjacentHTML("beforeend", `<li class="picStyle"><img class="img-styles" src="${image.url}" alt="${image.alt}" width="350px" /></li>`)  
+// })
+// коли таким методом ставлю afterbegin картинки чогось стають у зворотньому порядку, з чим це пов'язано?
+
+const pictureArr = images.map(({ url, alt }) => {
+  return `<li class="picStyle"><img class="img-styles" src='${url}' alt='${alt}' width="350px" /></li>`
+}).join(" ");
+console.log(pictureArr);
 
 gallery.classList.add("list")
-const img = document.querySelectorAll("img")
-img.classList.add("img-styles")
+gallery.insertAdjacentHTML("afterbegin", pictureArr)
