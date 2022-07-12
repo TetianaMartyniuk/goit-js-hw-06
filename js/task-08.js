@@ -12,7 +12,7 @@ form.addEventListener("submit", (event) => {
     // const {
     //     elements: { email, password }
     // } = event.currentTarget;
-    // якщо писати так об'єкт - то як до нього звернутись для виводу в консоль? не розумію 
+    // якщо писати так об'єкт з деструкторизацією через elements - то як до нього звернутись для виводу в консоль? не розумію 
     if (event.currentTarget.elements.email.value !== "" && event.currentTarget.elements.password.value !== "") {
         newUser.email = event.currentTarget.elements.email.value;
         newUser.password = event.currentTarget.elements.password.value;
