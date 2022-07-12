@@ -17,10 +17,14 @@ const ingredients = [
 //   ingredientsList.append(item)
 // }
 
+const newIngredients = [];
+
 ingredients.forEach((ingredient) => {
   const item = document.createElement("li");
   item.classList.add("item")
   item.textContent = ingredient;
   console.log(item);
-  ingredientsList.append(item)
+  newIngredients.push(item);
 })
+
+ingredientsList.append(...newIngredients);
