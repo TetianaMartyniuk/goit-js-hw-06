@@ -8,18 +8,17 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
     // // const evtTar = event.currentTarget;
     // // console.dir(evtTar);
-    const newUser = {
-        email: event.currentTarget.elements.email.value,
-        password: event.currentTarget.elements.password.value,
-    }
+    const newUser = {}
     // const {
     //     elements: { email, password }
     // } = event.currentTarget;
     // якщо писати так об'єкт - то як до нього звернутись для виводу в консоль? не розумію 
-    if (newUser.email === "" || newUser.password === "") {
-     alert("All fields must be filled!")
-    } 
+    if (event.currentTarget.elements.email.value !== "" && event.currentTarget.elements.password.value !== "") {
+        newUser.email = event.currentTarget.elements.email.value;
+        newUser.password = event.currentTarget.elements.password.value;
+        return console.log(newUser)
+    }
+    alert("All fields must be filled!")
 
-    console.log(newUser)
 })
 
