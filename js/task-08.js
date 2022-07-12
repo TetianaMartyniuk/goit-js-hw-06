@@ -16,9 +16,10 @@ form.addEventListener("submit", (event) => {
     if (event.currentTarget.elements.email.value !== "" && event.currentTarget.elements.password.value !== "") {
         newUser.email = event.currentTarget.elements.email.value;
         newUser.password = event.currentTarget.elements.password.value;
+        form.reset();
         return console.log(newUser)
     }
-    alert("All fields must be filled!")
-
+    // form.reset();
+    return alert("All fields must be filled!")
 })
 
